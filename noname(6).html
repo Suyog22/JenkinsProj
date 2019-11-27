@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/storage/emulated/0/AOS/aos-master/aos-master/dist/aos.css">
+
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.footer{
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  position:relative;
+  bottom:0;
+  width:100%;
+}
+
+
+
+
+
+
+
+
+
+.dots{
+background-color:#bbb;
+border-radius:50%;
+display:inline-block;
+height:15px;
+width:15px;
+transition: background-color 0.6s ease;
+display:none;
+}
+
+.active{
+background-color:#717171;
+}
+
+img{
+vertical-align:middle;
+text-align:center;
+height:50%;
+width:100%;
+
+}
+
+.img1{
+vertical-align:middle;
+text-align:center;
+height:100%;
+width:100%;
+
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.fade{
+animation-name:fade;
+animation-duration:1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.slideshow-container{
+position:relative;
+max-width:1000px;
+margin:auto;
+}
+
+.myslider{
+display:none;
+}
+
+
+section {
+background:#000h;
+}
+
+h3{
+margin:0;
+padding-top:50px;
+position:absolute;
+top:10px;
+width:100%;
+transform: tranlateY(-50%);
+color: #ddd;
+text-align:center;
+}
+
+h3 span{
+display:inline-block;
+animation: animate 1s linear forwards;
+}
+
+@keyframes animate{
+
+   0%{
+     opacity:0;
+     transform:(rotateY(90deg));
+     filter:blur(10px);
+   }
+   100%
+   {
+      opacity:1;
+      transform:(rotateY(0deg));
+      filter:blur(0);
+   }
+
+}
+h3 span:nth-child(1) {
+animation-delay:0.3s;
+}
+h3 span:nth-child(2) {
+animation-delay:0.7s;
+}
+h3 span:nth-child(3) {
+animation-delay:1.2s;
+}
+h3 span:nth-child(4) {
+animation-delay:1.6s;
+}
+h3 span:nth-child(5) {
+animation-delay:2.2s;
+}
+h3 span:nth-child(6) {
+animation-delay:2.6s;
+}
+h3 span:nth-child(7) {
+animation-delay:2.9s;
+}
+h3 span:nth-child(8) {
+animation-delay:3.3s;
+}
+h3 span:nth-child(9) {
+animation-delay:3.7s;
+}
+h3 span:nth-child(10) {
+animation-delay:4.0s;
+}
+h3 span:nth-child(11) {
+animation-delay:4.4s;
+}
+h3 span:nth-child(12) {
+animation-delay:4.7s;
+}
+
+#myVideo{
+object-fit:cover;
+height:150px;
+width:100%;
+z-index: -100;
+}
+
+</style>
+<script src="/storage/emulated/0/AOS/aos-master/aos-master/dist/aos.js"></script>
+</head>
+<body>
+ 
+  
+  <video autoplay muted loop id="myVideo">
+  <source src="/storage/emulated/0/Download/smoke.mp4" type="video/MP4">
+  </video>
+  
+  
+  
+  <h3>
+  <span>S</span>
+  <span>H</span>
+  <span>O</span>
+  <span>P</span>
+  <span>P</span>
+  <span>E</span>
+  <span>R</span>
+  <span>S</span>
+  <span>S</span>
+  <span>T</span>
+  <span>O</span>
+  <span>P</span>
+  </h3>
+ 
+  <p style="text-align:center;">Experience the lifestyle.</p>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="/storage/emulated/0/noname(1).html">Products</a>
+  <a href="/storage/emulated/0/noname(5).html">Offers</a>
+  
+</div>
+
+<div class="row">
+  <div class="column" data-aos="zoom-in" data-aos-duration="3000" >
+    <h2>Product Variety</h2>
+    <p>Physical stores have a limited stock. They only keep those things which are common and most selling. There are many different reasons which affect the availability of different products. The local retailer also tries to sell their limited stock. While ShoppersStop showcases the variety from their stock and different stores. You can browse and select products as per your choice and latest trend.</p>
+  </div>
+  
+  <div class="column" data-aos="zoom-in" data-aos-duration="3000" >
+   <h2>Product Replacement and Refund</h2>
+   <p>Product replacement and refund is really simple with additional cost and time. Sometimes you need to change a product which doesn’t fulfill your expectation. ShoppersStop provides you product replacement warranty for a limited time period. In this period if you find the product has defect and malfunction then you can replace the product as per product replacement policy.</p>
+  </div>
+  
+  <div class="column" data-aos="zoom-in" data-aos-duration="3000">
+    <h2>Amazing Offers</h2>
+    <p>ShoppersStop offers deals on purchases, price reductions and other offers such as free delivery.  
+    Apart from a direct discount, ShoppersStop provides exclusive coupon codes and deals.
+    </p>
+ </div>
+ </div>
+ 
+<div class="row"> 
+ 
+ <div class="column1" data-aos="zoom-in" data-aos-duration="3000">
+ <h2 style="text-align:center">Popular Brands</h2>
+ 
+ <div class="slideshow-container">
+ <div class="myslide fade">
+ <img src="/storage/emulated/0/DCIM/Screenshots/IMG_20190828_140628.jpg">
+ </div>
+ 
+ <div class="myslide fade">
+ <img src="/storage/emulated/0/DCIM/Screenshots/IMG_20190828_141257.jpg">
+ </div>
+ 
+ <div class="myslide fade">
+ <img src="/storage/emulated/0/DCIM/Screenshots/IMG_20190828_142154.jpg">
+ </div>
+ 
+ <div style="text-align:center">
+ <span class="dots"></span>
+ <span class="dots"></span>
+ <span class="dots"></span>
+ </div>
+ </div>
+ 
+</div>
+
+<div class="row"> 
+ 
+ <div class="column1" data-aos="zoom-in" data-aos-duration="3000">
+ <h2 style="text-align:center">Top rated</h2>
+ <img class="img1"src="/storage/emulated/0/DCIM/Screenshots/IMG_20190827_150319.jpg">
+ 
+ </div>
+</div>
+</div>
+
+<div class="footer">
+  <h2>Powered by @Tatya_W_inch_00</h2>
+  <h5>&copy Suyog Majgaonkar</h5>
+  <h5>All rights reserved</h5>
+</div>
+
+<script type="text/javascript">
+var slideindex=0;
+showslides();
+
+function showslides()
+{
+var i;
+var dots=document.getElementsByClassName("dots");
+var img=document.getElementsByClassName("myslide");
+
+for(i=0;i<img.length;i++)
+  {
+    img[i].style.display = "none";
+  }
+  
+  slideindex++;
+  if (slideindex > img.length) 
+  {
+     slideindex = 1;
+  }
+  for(i=0;i<dots.length;i++)
+  {
+    dots[i].className = dots[i].className.replace(" active","");
+  }
+  img[slideindex-1].style.display = "block";
+  dots[slideindex-1].className += " active";
+  setTimeout(showslides,2000);
+}   
+</script>
+<script>
+
+AOS.init();
+
+</script>
+</body>
+</html>
