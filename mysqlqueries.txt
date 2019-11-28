@@ -1,0 +1,13 @@
+show databases;
+create database Login_db;
+use Login_db;
+create table Login(id int auto_increment,username varchar(45),password varchar(45),primary key(id));
+insert into Login(username,password) values("Suyog22","computerworld");
+select * from Login;
+DROP TABLE PRODUCT;
+create table Product(id int auto_increment,name varchar(45),description varchar(100),imgpath varchar(100),price int,primary key(id));
+insert into product(name,description,imgpath,price) values ("puma","Dwane IDP Running SHoes for men","http://localhost:8080//mainforlogin/Puma_Shoes.jpg",1499);
+insert into product(name,description,imgpath,price) values ("LANCER"," Running SHoes for men","http://localhost:8080//mainforlogin/Lancer_Shoes.jpg",1299);
+update product set description = "Dwane IDP Running Shoes for men" where id = 1;
+update product set description = "Running Shoes for men" where id = 2;
+insert into product(name,description,imgpath,price) values ("LANCER"," Running Shoes for men","http://localhost:8080//mainforlogin/HeartKing.jpg",1299);
