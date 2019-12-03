@@ -1,0 +1,182 @@
+<html>
+<body>
+<style type="text/css">
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<h4 style="text-align:right">Your cart</h3>
+<table id="customers">
+<tr>
+<th>Description</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>
+<p id="showmydesc"></p>
+</td>
+<td>
+<p id="showmyprice"></p>
+</td>
+</tr>
+</table>
+<p id="test2"></p>
+
+<h3>Enter the quantity</h3>
+<button class="button" onclick="addquantity()">+</button>
+<input type="text" size="4" style="padding:10px 15px;" id="mytext" value="1">
+<button class="button" onclick="subtractquantity()">--</button> 
+<br>
+<button class="button" onclick="result()">Submit</button>
+
+<h3 style="text-align:right">Have a coupon code?
+<br>Apply it here
+</h3>
+<button id="myBtn" class="button" onclick="ApplyCode()">Apply</button>
+<input type="text" size="9" style="padding:10px 15px;float:right;text-align:center" id="mytext3">
+<br>
+<br>
+<h3 style="text-align:right">Total price with GST:
+</h3>
+
+<input type="text" size="9" style="padding:10px 15px;float:right;text-align:center" id="mytext1">
+<br>
+<br>
+<br>
+<h3 style="text-align:right">Enter the account-no</h3>
+<input type="text" size="9" style="padding:10px 15px;float:right;text-align:center" id="mytext2">
+<br><br><br>
+<button class="button" onclick="placeorder()" style="float:right">PLACE ORDER</button>
+<br><br>
+<h3>After purchasing balance is:<p id="curbalance"></p></h3>
+
+<script type="text/javascript">
+var y=localStorage.getItem('price');
+
+y=JSON.parse(y);
+var price = y.price;
+var desc = y.desc;
+document.getElementById("showmyprice").innerHTML=price;
+document.getElementById("showmydesc").innerHTML=desc;
+
+
+var offer=JSON.parse(localStorage.getItem("code") || "[]");    
+var discount;
+var percentage;  
+
+
+var totalbalance=10000;
+var a =0;
+a += price;
+
+var res;
+var temp=0;
+var quantity=1;
+
+function addquantity()
+{
+  quantity++;
+  document.getElementById("mytext").value = quantity;
+}
+ 
+function subtractquantity()
+{
+  quantity--;
+  document.getElementById("mytext").value = quantity;
+}
+ 
+function result()
+{
+   res=quantity*a;
+   var gst= res*5/100;
+   res=res+gst;
+   document.getElementById("mytext1").value = res ;
+}
+
+function ApplyCode()
+{
+   var couponcode = document.getElementById("mytext3").value;
+   
+   var flag = 0;
+   
+   for (i = 0; i <offer.length; i++) 
+   {
+     var offer1 = offer[i];
+     var promocode = offer1.code;
+     var getdesc = offer1.proddesc;
+     var percentage = offer1.percent;
+     
+     if(desc == getdesc && couponcode == promocode)
+     {
+        discount=res*percentage/100;
+        res = res-discount;
+        document.getElementById("mytext1").value = res ;
+        document.getElementById("myBtn").disabled = true;
+        flag =1;
+        break;
+     }
+   }
+   
+   if(flag == 0)
+   {
+      alert("please enter correct coupon code");
+   }
+}
+
+
+
+
+function placeorder(){
+var accval = document.getElementById("mytext2").value;
+var cost = document.getElementById("mytext1").value;
+
+if(accval=="DBXPM1125B")
+{
+  alert("Your order is placed");
+  totalbalance=totalbalance-cost;
+  document.getElementById("curbalance").innerHTML=totalbalance;
+  
+}
+else
+{
+  alert("Please enter correct acc no");
+}
+}
+</script>
+
+</body>
+</html>
