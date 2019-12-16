@@ -1,0 +1,11 @@
+Products
+
+1	puma	Dwane IDP Running Shoes for men	http://localhost:8080//mainforlogin/Puma_Shoes.jpg	1499	17	Light & Comfortable made with highly durable material Decent color Stiches are of high quality Maintains the grip well
+2	LANCER	Running Shoes for men	http://localhost:8080//mainforlogin/Lancer_Shoes.jpg	1299	15	LANCER SPORTS SHOES are the perfect companion for people who are into sports or follow strict fitness regimen such as jogging or brisk walking.While running or playing, the feet tend to feel more pressure and need more traction which cannot be provided b...
+4	Sparx	 Sparx SD0323G Canvas Shoes For Men	http://localhost:8080//mainforlogin/SparxShoes.jfif	999	2	Guaranteed to provide ultimate comfort and style, this pair of white sports shoes is designed with a padded footbed and cutwork detail. The popular brand, Sparx offers a wide spectrum of stylish footwear that are a fusion of contemporary designs and impe...
+5	Nike	 Nike Lunar Fingertrap Cross Trainer Sneakers	http://localhost:8080//mainforlogin/Nike Shoes.jpeg	2599	9	This sportswear is not only affordable, comfortable, of superior quality but also looks great and is very fashionable
+6	ADIDAS	 ADIDAS HYPERON M SS 19 Running Shoes For Men	http://localhost:8080//mainforlogin/adidasShoes.jfif	2999	10	This shoe provides best running experience,3-D Printed Soles,it's a beautiful shoe that boasts a seamless upper which will allow for greater style and flexibility.
+7	ADIDAS	 ADIDAS SMASH IND SS 19 Running Shoes For Men	http://localhost:8080//mainforlogin/adiadasshoes1.jfif	2699	15	This shoe protect your feet when pounding the pavement over and over again.It also provides more cushioning and support, which often translates into a higher heel drop.
+
+
+
