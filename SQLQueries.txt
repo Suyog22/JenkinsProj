@@ -1,0 +1,24 @@
+show databases;
+create database Login_db;
+use Login_db;
+create table Login(id int auto_increment,username varchar(45),password varchar(45),primary key(id));
+insert into Login(username,password) values("Suyog22","computerworld");
+select * from Login;
+DROP TABLE PRODUCT;
+create table Product(id int auto_increment,name varchar(45),description varchar(100),imgpath varchar(100),price int,primary key(id));
+insert into product(name,description,imgpath,price) values ("puma","Dwane IDP Running SHoes for men","http://localhost:8080//mainforlogin/Puma_Shoes.jpg",1499);
+insert into product(name,description,imgpath,price) values ("LANCER"," Running SHoes for men","http://localhost:8080//mainforlogin/Lancer_Shoes.jpg",1299);
+update product set description = "Dwane IDP Running Shoes for men" where id = 1;
+update product set description = "Running Shoes for men" where id = 2;
+insert into product(name,description,imgpath,price,quantity,productdetails) values ("Nike"," Nike Lunar Fingertrap Cross Trainer Sneakers","http://localhost:8080//mainforlogin/Nike Shoes.jpeg",2599,2,"This sportswear is not only affordable, comfortable, of superior quality but also looks great and is very fashionable");
+select * from product;
+delete from product where id = 3;
+alter table product add column quantity int;
+alter table product add column productdetails varchar(5000);
+insert into product(name,description,imgpath,price,quantity,productdetails) values ("ADIDAS"," ADIDAS SMASH IND SS 19 Running Shoes For Men","http://localhost:8080//mainforlogin/adiadasshoes1.jfif",2699,16,"This shoe protect your feet when pounding the pavement over and over again.It also provides more cushioning and support, which often translates into a higher heel drop.");
+create table Ratings(id int auto_increment,productid int,ratings int,username varchar(45),primary key(id));
+select * from Ratings;
+drop table Ratings;
+Truncate table Ratings;
+
+
